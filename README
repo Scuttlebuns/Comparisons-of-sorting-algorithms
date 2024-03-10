@@ -1,0 +1,60 @@
+# CS 115 Project - Comparison of Sorting Algorithms
+
+## Project Overview
+This project is a comprehensive analysis of sorting algorithms, comparing theoretical predictions with actual performance. We are studying Insertion, Selection, Bubble, Merge, Quick, Heap, Counting, and Radix Sort algorithms, focusing on integers in the range [0, n-1].
+
+## Team Members
+- Anthony Sayre (Lead CTO - Main program development, test execution)
+- Tevin Heins (Data generation, experimental setup, graph generation)
+- Memo Prado (Input vector generation, theoretical analysis, video editing)
+- Sarah Garner (Mathematical analysis, report writing lead)
+
+Instructor: Dr. Pirouz
+
+## Weekly Check-ins
+Weekly check-ins will occur on Discord after the CSCI 115 lecture, Thursdays @
+10:30ish.
+
+## Installation
+To set up the environment for running sorting algorithm comparisons:
+
+```bash
+# Clone the repository
+git clone https://github.com/your-repo/cs_115_project.git
+
+# Navigate to the project directory
+cd 115_Project
+
+# Compile the project (Make sure you have a C++ compiler installed)
+currently use g++ to compile main, eventually a Makefile will be created
+```
+
+## Usage
+To run the sorting algorithm comparison:
+
+Follow the on-screen prompts to execute different sorting algorithms and generate results.
+
+## Reports and Analysis
+The project includes a detailed report addressing theoretical questions, data generation, experimental setup, and analysis. For experimental results and theoretical discussions, refer to the REPORT.md within this repository.
+
+## Code Structure and Style
+- Main program with separate header files for each algorithm.
+- Use of `std::vector` instead of raw arrays and adherence to clear code styling guidelines for readability.
+- Inclusion of a detailed instruction manual on how to generate input data and interpret output results.
+
+## Sample Output
+Refer to `sample_output.txt` for expected program output after execution.
+
+## Input File Guidelines
+Each input file must start with the size of the data set, followed by the data set itself formatted as per the instructions in the `input_guidelines.txt`.
+
+## Contribution Statement
+A detailed contribution statement is provided, highlighting each member's involvement and reflection on the group collaboration.
+
+## Acknowledgments
+Special thanks to Dr. Pirouz for the guidance, and appreciation to all peers who supported the development process.
+
+---
+
+For any additional questions or collaboration, please reach out through the Discord group.
+
