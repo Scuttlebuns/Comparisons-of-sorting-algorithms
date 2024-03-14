@@ -10,6 +10,17 @@
 ## Project Overview
 This project is a comprehensive analysis of sorting algorithms, comparing theoretical predictions with actual performance. We are studying Insertion, Selection, Bubble, Merge, Quick, Heap, Counting, and Radix Sort algorithms, focusing on integers in the range [0, n-1].
 
+##Studied Algorithms
+Insertion Sort
+Selection Sort
+Bubble Sort
+Merge Sort
+Quick Sort
+Heap Sort
+Counting Sort
+Radix Sort
+
+
 ## Team Members
 - Anthony Sayre (Lead CTO - Main program development, test execution)
 - Tevin Heins (Data generation, experimental setup, graph generation)

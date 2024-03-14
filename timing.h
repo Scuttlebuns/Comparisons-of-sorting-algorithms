@@ -27,7 +27,7 @@ long long timeSort(Func sortFunction, vector<int> data){
 
 
 
-
+/*
 // Declaration of the sort functions
 void insertionSort(vector<int> &vec);
 void selectionSort(vector<int> &vec);
@@ -37,4 +37,4 @@ void quickSort(vector<int> &vec);
 void heapSort(vector<int> &vec);
 void countingSort(vector<int> &vec);
 void radixSort(vector<int> &vec);
-
+*/
