@@ -43,9 +43,7 @@ git clone https://github.com/your-repo/cs_115_project.git
 # Navigate to the project directory
 cd 115_Project
 
-# Compile the project (Make sure you have a C++ compiler installed)
-currently use g++ to compile main, eventually a Makefile will be created
-```
+# Compile the project (Make sure you have a C++ compiler installed) use 'make' to compile the executable for this project, tested on c++2a and g++12.
 
 ## Usage
 To run the sorting algorithm comparison:

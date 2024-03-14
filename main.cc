@@ -14,10 +14,9 @@
 #include "algorithms/heap.h"
 #include "algorithms/counting.h"
 #include "algorithms/radix.h"
-
 using namespace std;
-Dataset dataset;
 
+Dataset dataset; //Global dataset of all unsorted vectors
 
 // Declaration of the sort functions
 void insertionSort(vector<int> &vec);
@@ -32,51 +31,54 @@ void radixSort(vector<int> &vec);
 int main(){
 
   string input; 
-  cout << "Which input file would you like?" << endl;
-  cout << "'input500.txt' or 'inputfile1.txt' " << endl;
-  cout << "Type '0' to use default" << endl;
+  cout << "Which input file would you like to use?" << endl;
+  cout << "Input '1' for 10, 2 for '500'" << endl;
   cin >> input;
   string folder = "inputfiles/";
-  if (input == "0") input = "inputfile1.txt";
+  if(input == "1") input = "inputfile1.txt";
+  else if(input == "2") input = "input500.txt";
+  else die("Input File not found!");
   folder += input;    
   load_dataset(folder);
 
-  int tempSize = dataset.get_inputSize();
-  vector<int> tempSorted = dataset.get_sorted();
-  vector<int> tempHalfSorted = dataset.get_halfSorted();
-  vector<int> tempReversed = dataset.get_reversed();
-
   /*
-  //FIXME - just used for testing
-cout << "Input Size: " << tempSize << endl;
-cout << "Sorted: ";
-for (int x : tempSorted) {cout << x << " "; } cout << endl;
-cout << "Half sorted: ";
-for (int x : tempHalfSorted) {cout << x << " "; } cout << endl;
-cout << "Reversed: ";
-for (int x : tempReversed) {cout << x << " "; } cout << endl;
+  cout << "Input numer of times to run program" << endl;
+  int numRuns = 0;
+  cin >> numRuns;
+  if(!cin or numRuns <= 0) die("Enter a number between 1 - N");
+ // vector<int> numRunsVec(numRuns);
 */
 
-  //Sorted functions:
-  string timeType = " microseconds"; //microseconds or milliseconds
-  cout << endl;
-  cout << "============================" << endl;
-  cout << "Timing results of Algorithms" << endl;
-  cout << "Size: "<< dataset.get_inputSize() << " || Type: Sorted" << endl;
-  cout << "Insertion: " << timeSort(insertionSort, dataset.get_sorted()) << timeType << endl;
-  cout << "Selection: " << timeSort(selectionSort, dataset.get_sorted()) << timeType << endl;
-  cout << "Bubble: " << timeSort(bubbleSort, dataset.get_sorted()) << timeType << endl;
-  cout << "Merge: " << timeSort(mergeSort, dataset.get_sorted()) << timeType << endl;
-  cout << "Quick: " << timeSort(quickSort, dataset.get_sorted()) << timeType << endl;
-  cout << "Heap: " << timeSort(heapSort, dataset.get_sorted()) << timeType << endl;
-  cout << "Counting: " << timeSort(countingSort, dataset.get_sorted()) << timeType << endl;
-  cout << "Radix: " << timeSort(radixSort, dataset.get_sorted()) << timeType << endl;
-  cout << "============================" << endl;
 
+  string timeType = " microseconds"; //FIXME microseconds or milliseconds (will pick later, once more input size)
+  for(int i = 0; i < 3; i++){
+    vector<int> dataVec;
+    string label = "NO LABEL";
+    if(i == 0){
+      label = "Sorted";
+      dataVec = dataset.get_sorted();
+    }
+    else if(i == 1){
+      label = "Half Sorted";
+      dataVec = dataset.get_halfSorted();
+    }
+    else{
+      label = "Reversed";
+      dataVec = dataset.get_reversed();
+    }
 
-
-  /*
-  cout << "Insertion (Half Sorted): " << timeSort(insertionSort, dataset.get_halfSorted()) << " microseconds" << endl;
-  cout << "Insertion (Reversed): " << timeSort(insertionSort, dataset.get_reversed()) << " microseconds" << endl;
-*/
+    cout << endl;
+    cout << "============================" << endl;
+    cout << "Timing results of Algorithms" << endl;
+    cout << "Size: "<< dataset.get_inputSize() << " || Type: " << label << endl;
+    cout << "Insertion: " << timeSort(insertionSort, dataVec) << timeType << endl;
+    cout << "Selection: " << timeSort(selectionSort, dataVec) << timeType << endl;
+    cout << "Bubble: " << timeSort(bubbleSort, dataVec) << timeType << endl;
+    cout << "Merge: " << timeSort(mergeSort, dataVec) << timeType << endl;
+    cout << "Quick: " << timeSort(quickSort, dataVec) << timeType << endl;
+    cout << "Heap: " << timeSort(heapSort, dataVec) << timeType << endl;
+    cout << "Counting: " << timeSort(countingSort, dataVec) << timeType << endl;
+    cout << "Radix: " << timeSort(radixSort, dataVec) << timeType << endl;
+    cout << "============================" << endl;
+  }
 }
