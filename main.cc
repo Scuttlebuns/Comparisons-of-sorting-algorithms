@@ -1,3 +1,8 @@
+//Use Make to build this project
+#ifndef USE_MAKEFILE
+#error "Please compile with 'make' instead of directly using 'g++'"
+#endif
+
 #include <iostream>
 #include "dataset.h"
 #include "timing.h"
