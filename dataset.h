@@ -17,24 +17,24 @@ class Dataset{
 private:
   int inputSize;
   vector<int> sorted;
-  vector<int> halfSorted;
+  vector<int> random;
   vector<int> reversed;
 
 public:
   //Cstors:
   Dataset() {}
-  Dataset(int new_inputSize, vector<int> new_sorted, vector<int> new_halfSorted, vector<int> new_reversed) : inputSize(new_inputSize), sorted(new_sorted), reversed(new_reversed) {} 
+  Dataset(int new_inputSize, vector<int> new_sorted, vector<int> new_random, vector<int> new_reversed) : inputSize(new_inputSize), sorted(new_sorted), random(new_random) ,reversed(new_reversed) {} 
 
   //Getters
   int get_inputSize() const { return inputSize; }
   vector<int> get_sorted() const { return sorted; }
-  vector<int> get_halfSorted() const { return halfSorted; }
+  vector<int> get_random() const { return random; }
   vector<int> get_reversed() const { return reversed; }
 
   //Setters
   void set_inputSize(int temp) { inputSize = temp; }
   void set_sorted(int temp) {sorted.push_back(temp); }
-  void set_halfSorted(int temp) { halfSorted.push_back(temp); }
+  void set_random(int temp) { random.push_back(temp); }
   void set_reversed(int temp) { reversed.push_back(temp); }
 
 };
@@ -66,7 +66,7 @@ inline void load_dataset(string fileName = "inputfiles/inputfile1.txt") {
         dataset.set_sorted(temp);
       } 
       else if (vectorChoice == 1) {    
-        dataset.set_halfSorted(temp);
+        dataset.set_random(temp);
       }
       else if (vectorChoice == 2) {
         dataset.set_reversed(temp);

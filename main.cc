@@ -59,8 +59,8 @@ int main(){
       dataVec = dataset.get_sorted();
     }
     else if(i == 1){
-      label = "Half Sorted";
-      dataVec = dataset.get_halfSorted();
+      label = "Random";
+      dataVec = dataset.get_random();
     }
     else{
       label = "Reversed";
@@ -71,6 +71,7 @@ int main(){
     cout << "============================" << endl;
     cout << "Timing results of Algorithms" << endl;
     cout << "Size: "<< dataset.get_inputSize() << " || Type: " << label << endl;
+
     cout << "Insertion: " << timeSort(insertionSort, dataVec) << timeType << endl;
     cout << "Selection: " << timeSort(selectionSort, dataVec) << timeType << endl;
     cout << "Bubble: " << timeSort(bubbleSort, dataVec) << timeType << endl;
