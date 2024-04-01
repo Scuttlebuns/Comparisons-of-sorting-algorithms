@@ -49,6 +49,7 @@ cd 115_Project
             |-> Makefile
             |-> main.cc
             |-> dataset.h
+            |-> testrun.h
             |-> timing.h
             |-> inputfiles/
             |     |
@@ -68,8 +69,7 @@ cd 115_Project
                   |-> selection.h
 
 2) A. Make the 115_Project/ directory 
-   B. Inside of the 115_Project/ copy "README", "main.cc" 
-  ", "dataset.h", "timing.h", make a directory called "inputfiles" and a direcotry called algorithms
+   B. Inside of the 115_Project/ copy "README", "main.cc" "testrun.h", "dataset.h", "timing.h", make a directory called "inputfiles" and a direcotry called algorithms
    C. Inside of inputfiles, copy "generator.cc", "input500.txt", "input50k.txt" and "input500k.txt" to the directory
    D. Inside of the algorithms directory copy "bubble.h", "counting.h", "heap.h", "insertion.h", "merge.h", "quick.h", "radix.h", "selection.h"
 

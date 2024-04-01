@@ -1,12 +1,14 @@
 // testrun.h
+// test run is used for averaging runs to produce an accurate result
 #pragma once
 #include <iostream>
 #include <vector>
 #include <numeric>
 #include <string>
-
 using namespace std;
 
+
+//Testrun class, contains a vector for all sorting algorithms
 class Testrun {
 private:
     vector<long long> insertion_time;
@@ -19,6 +21,7 @@ private:
     vector<long long> radix_time;
 
 public:
+  //Cstors:
     Testrun() {}
     Testrun(const vector<long long>& new_insertion_time,
             const vector<long long>& new_selection_time,
@@ -37,7 +40,7 @@ public:
           counting_time(new_counting_time),
           radix_time(new_radix_time) {}
 
-    // Getters
+    // Getters:
     vector<long long> get_insertion_time() const { return insertion_time; }
     vector<long long> get_selection_time() const { return selection_time; }
     vector<long long> get_bubble_time() const { return bubble_time; }
@@ -47,7 +50,7 @@ public:
     vector<long long> get_counting_time() const { return counting_time; }
     vector<long long> get_radix_time() const { return radix_time; }
 
-    // Setters
+    // Setters:
     void set_insertion_time(long long temp) { insertion_time.push_back(temp); }
     void set_selection_time(long long temp) { selection_time.push_back(temp); }
     void set_bubble_time(long long temp) { bubble_time.push_back(temp); }
@@ -58,7 +61,8 @@ public:
     void set_radix_time(long long temp) { radix_time.push_back(temp); }
 };
 
-long long timeAverage(vector<long long> timeVec, int numRuns){
+//Function called timeAverage, which returns the average of the vector of runs per algorithm, this is called for each algorithm in main
+inline long long timeAverage(vector<long long> timeVec, int numRuns){
   double doubleNumRuns = static_cast<double>(numRuns);
 
  // if(timeVec.size() == 1) return timeVec.at(1); 
