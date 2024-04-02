@@ -69,3 +69,4 @@ inline long long timeAverage(vector<long long> timeVec, int numRuns){
   double sum = accumulate(timeVec.begin(), timeVec.end(), 0.0);
   return sum / doubleNumRuns; 
 }
+
