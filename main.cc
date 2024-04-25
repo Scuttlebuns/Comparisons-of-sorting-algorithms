@@ -86,7 +86,7 @@ int main(){
     cout << "Type: " << label << endl;
     for(int j = 0; j < numRuns; j++){ //For loop for number of times run, allows for averaging
 
-      //populates the each algorithsm timing and pushes back into individual vectors for averaging.
+      //populates the each algoriths timing and pushes back into individual vectors for averaging.
       //timesort is a function that return the [microseconds (currently)] and takes in a sorting function
       testrun.set_insertion_time(timeSort(insertionSort, dataVec));
       testrun.set_selection_time(timeSort(selectionSort, dataVec));

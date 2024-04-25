@@ -1,7 +1,9 @@
 #Forces use of g++ 12 for compilation
 CXX = g++-12 
 #disables g++ and forces use of make, prompting error in main.cc
-CXXFLAGS = -g -std=c++2a -DUSE_MAKEFILE
+#CXXFLAGS = -g -std=c++2a -DUSE_MAKEFILE
+#using g++ -03 for maximum speed and optimization
+CXXFLAGS = -O3 -std=c++2a -DUSE_MAKEFILE
 TARGET = a.out
 SOURCES = main.cc
 
