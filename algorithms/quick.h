@@ -15,9 +15,20 @@ inline int choosePivot(vector<int>& vec, int start, int end, int pivotChoice) {
   if (pivotChoice == 1) { // First element
     return start;
   }
+  //Pick one of the following options
+  //Option 1
   else if (pivotChoice == 2) { // Random element
     return start + rand() % (end - start + 1);
   }
+  /*
+  //Option 2
+  //This code is used when producing a worse case for quicksort
+  //When taking an array it returns the end, which divides the pivot into unbalanced arrays
+  //Only this option or random can be active at a time, which is why it is commented out
+  else if (pivotChoice == 2) { // Worse Case
+    return end;
+  }
+  */
   else { // Median of first, middle, last
     int middle = start + (end - start) / 2;
     vector<int> median = {vec[start], vec[middle], vec[end]};
